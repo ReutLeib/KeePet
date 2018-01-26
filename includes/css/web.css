@@ -1,0 +1,40 @@
+
+@media screen and (min-width: 780px) {
+    #wrapper {
+        display: none;
+    }
+
+    #web-only {
+        width: 1024px;
+        margin: 11% auto;
+    }
+
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 0;
+        font-size: xx-large;
+        margin-bottom: 1rem;
+        font-family: 'Roboto';
+    }
+
+    #qr-code {
+        margin: 0 auto;
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

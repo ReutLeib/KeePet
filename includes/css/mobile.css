@@ -1,0 +1,48 @@
+.container{
+  margin-top: 100px;
+  padding: -20px !important;
+}
+
+
+#middleForm{
+  position: absolute;
+  left: 45px;
+}
+
+#login{
+  width: 100%;
+  max-width: 1000px;
+  background-image: url('../../images/background-alpha.png');
+ margin: 0 auto;
+}
+
+
+#login .container{
+  margin-top: 20px;
+}
+
+.signInGreen{
+  width: 270px;
+  height: 36px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 130px;
+  background: url(../../images/signInGreen.png);
+}
+
+.signUpGreen{
+  width: 270px;
+  height: 36px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background: url(../../images/signUpGreen.png);
+}
+
+#logo{
+  width: 270px;
+  height: 164px;
+  margin: 0 auto;
+  background: url(../../images/logooo.png) no-repeat;
+}
+

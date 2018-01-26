@@ -1,0 +1,235 @@
+
+@media screen and (max-width: 799px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #web-only {
+        display: none;
+        border: none;
+    }
+
+     h1 {
+        display: none;
+    }
+
+    body {
+        background-image: url('../../images/background-alpha.png');
+    }
+
+    #wrapper {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+
+    #bottom-nav {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+    #top-nav {
+        top: 0;
+        z-index: 1;
+        background: #FFF url(../../images/background-alpha.png);
+        position: fixed;
+        width: 100%;
+    }
+
+    #top-nav a{
+        width: 100%;
+    }
+
+    #bottom-nav nav {
+        height: 56px;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        margin: 10px auto;
+    }
+
+    img#logo {
+        margin: 0 auto;
+        position: relative;
+        display: block;
+        width: 56px;
+        height: 33px;
+    }
+
+    img#control-nav {
+        display: none;
+        position: fixed;
+        left: 8.33%;
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .dis-like {
+        display: none;
+    }
+
+    #favorites {
+        margin-top: 47px;
+        position: relative;
+        bottom: 46px;
+    }
+
+    .fa-ul {
+        width: 100%;
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    li > a {
+        text-align: center;
+        display: block;
+        width: 30vw;
+        float: left;
+    }
+
+    .nav-active {
+        color: #40867A;
+    }
+
+    .fa-star {
+        color: #40867A;
+    }
+
+    .fa-search {
+        color: #D1D3D4;
+    }
+
+    .fa-user {
+        color: #D1D3D4;
+    }
+
+    p {
+        margin: 0;
+        color: #D1D3D4;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .card {
+        margin: 10px auto;
+        width: 96%;
+        height: 184px;
+    }
+
+    .card p {
+        position: relative;
+        top: 13px;
+        display: inline;
+        font-family: 'Roboto', sans-serif;
+        font-size: x-large;
+        color: rgba(0, 0, 0, 0.58);
+    }
+
+    p.name{
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-size: xx-large;
+        margin-left:5%;
+        color: rgba(0, 0, 0, 0.58);
+    }
+
+    img.add-to-calendar {
+        float: right;
+        margin: 10%;
+        display: inline-block;
+    }
+
+    .card #rate {
+        display: inline;
+        float: right;
+        margin: 5% 5%;
+    }
+
+    p.date {
+        position: relative;
+        top: -57px;
+        margin: 5% 5%;
+        float: right;
+        font-family: 'Roboto', sans-serif;
+        font-size: small;
+        color: rgba(0, 0, 0, 0.58);
+    }
+
+    p.review-little {
+        display: block;
+        position: relative;
+        margin: -4% 5%;
+        font-family: 'Roboto', sans-serif;
+        font-size: smaller;
+        color: rgba(0, 0, 0, 0.58);
+    }
+
+    .card section .fa-star {
+        color: #40867A;
+    }
+
+    article p:first-child{
+        float: right;
+        display: block;
+        margin: 1% 7% 0% 1%;
+        color: #40867A;
+    }
+
+    i.fa.fa-phone{
+        margin-left: -15%;
+    }
+
+    article p:first-child img{
+        width: 22px;
+        height: 22px;
+        margin-left: 15%;
+    }
+
+    p.description {
+        display: block;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        font-size: smaller;
+        color: rgba(0, 0, 0, 0.58);
+        margin: 2% 2% 2% 5%;
+    }
+
+    p span {
+        font-weight: bold;
+    }
+
+    .fa-commenting{
+        margin-right: 1%;
+    }
+
+    .fa-trash {
+        position: relative;
+        font-size: 27px;
+        color: #E35623;
+        left: 32px;
+        top: 120px;
+    }
+
+    .card-img-top {
+        display: block;
+        float: right;
+        margin-top: 5%;
+        margin-right: 4%;
+        width: 64px;
+        height: 64px;
+    }
+
+    .navbar button {
+        position: fixed;
+        float: right;
+    }
+
+}

@@ -1,0 +1,544 @@
+
+@media screen and (max-width: 799px) {
+    *{
+        margin:0;
+        padding: 0;
+    }
+
+    #web-only {
+        display: none;
+    }
+
+    #background {
+        width: 360px;
+        height: 360px;
+        background-image: url('../../images/background-alpha.png');
+    }
+
+    #wrapper {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #web-nav {
+        top: 0;
+        z-index: 1;
+        background: #FFF url(../../images/background-alpha.png);
+        position: fixed;
+        width: 100%;
+    }
+
+
+    #bottom-nav {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+
+    #bottom-nav nav {
+        height: 56px;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        margin: 10px auto;
+    }
+
+    img#logo{
+        display: block;
+        width: 56px;
+        height: 33px;
+    }
+
+    img#control-nav {
+        display: block;
+        position: relative;
+        left: 78.33%;
+        margin-top: 51%;
+        width: 26px;
+        height: 26px;
+    }
+
+    .fa-ul {
+        width: 100%;
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+
+    li > a {
+        text-align: center;
+        display: block;
+        width: 30vw;
+        float: left;
+    }
+
+    .nav-active{
+        color: #40867A;
+    }
+
+    .fa-star{
+        color: #D1D3D4;
+    }
+
+    .fa-user {
+        color: #D1D3D4;
+    }
+
+    p{
+        margin: 0;
+        color: #222222;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #bottom-nav p{
+        margin: 0;
+        color: #D1D3D4;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #bottom-nav p.nav-active{
+        color: #40867A;
+    }
+
+    .card {
+        display: none;
+        margin: 29px auto;
+        width: 18rem;
+    }
+
+    .dis-like {
+        position: relative;
+        margin-left: 24%;
+    }
+
+    .dis-like img {
+        margin-right: 10%;
+    }
+
+    .navbar button {
+        position: fixed;
+        float: right;
+    }
+
+    .house-content {
+        position: relative;
+        left: 0;
+    }
+
+    .location img {
+        position: relative;
+        left: -120px;
+        top: -16px;
+    }
+
+    .location p{
+        position: relative;
+        top: -39px;
+        left: -40px;
+    }
+
+    .date img {
+        position: relative;
+        left: -120px;
+        top: -35px;
+    }
+
+    .date p{
+        position: relative;
+        top: -58px;
+        left: -34px;
+    }
+
+    .pet{
+        height: 0;
+    }
+
+    .date {
+        height: 0;
+    }
+
+    .pet img {
+        position: relative;
+        left: -120px;
+        top: -10px;
+    }
+
+    .pet p{
+        position: relative;
+        top: -33px;
+        left: -80px;
+    }
+
+    .list ul .cardlist{
+        padding-bottom: 0;
+    }
+
+    #control-nav-open {
+        visibility: hidden;
+        position: absolute;
+        box-shadow: 0px -1px 16px rgba(0, 0, 0, 0.13);
+        z-index: 1;
+        top: 0;
+        width: 75%;
+        height: 91%;
+        background-color: #ffffff;
+    }
+
+    #control-nav-open a img {
+        margin: 0 auto;
+        margin-left: 39%;
+        position: relative;
+        top: 31px;
+    }
+
+    #control-nav-open button {
+        float: right;
+        position: relative;
+        margin: 3%;
+        color: #40867A;
+    }
+
+    form {
+        position: relative;
+        top: 12%;
+    }
+
+    #dates {
+        position: relative;
+        top: 10%;
+        left: 7%;
+    }
+
+    #dates img {
+        display: block;
+        position: relative;
+        top: 3px;
+    }
+
+    #dates input[type="date"] {
+        float: left;
+        margin-right: 13px;
+        display: inline;
+        position: relative;
+        top: -18px;
+        left: 25px;
+        color: #000000;
+    }
+
+    #dates input[type="date"]::-webkit-clear-button {
+        display: none;
+    }
+
+    #dates input[type="date"]::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    #dates input[type="date"] {
+        width: 88px;
+        -webkit-appearance: none;
+        color: #95a5a6;
+        font-family: "Helvetica", arial, sans-serif;
+        font-size: 12px;
+        border: 1px solid #ecf0f1;
+    }
+
+    #city {
+        position: relative;
+        top: 17%;
+        left: 7%;
+        margin-top: 18%;
+    }
+
+    #city img {
+        position: relative;
+        top: 23px;
+        left: -38px;
+    }
+
+    #city p{
+        margin-left: 6%;
+    }
+
+    #price {
+        position: relative;
+        top: 17%;
+        left: 7%;
+        margin-top: 18%;
+    }
+
+    #price p {
+        display: inline;
+        position: relative;
+    }
+
+    #min-range {
+        margin-right: 63%;
+        left: 4px;
+    }
+
+    input[type="range"]{
+        display: block;
+        -webkit-appearance: none;
+        width: 211px;
+        height: 20px;
+        background: linear-gradient(to right, #D9D9D9 0%, #D9D9D9 100%);
+        background-size: 210px 3px;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb{
+        -webkit-appearance:none;
+        width:20px;
+        height:20px;
+        border-radius: 50%;
+        background:#5EC1B0;
+        position:relative;
+        z-index:3;
+        box-shadow:0 0 5px 0 rgba(0,0,0,0.3);
+    }
+
+    #pets {
+        position: relative;
+        top: 17%;
+        left: 7%;
+        margin-top: 23%;
+    }
+
+    #pets b {
+        position: relative;
+        bottom: 16px;
+    }
+
+    #pets label {
+        position: relative;
+        left: 171px;
+        top: -21px;
+    }
+
+    #pets .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+    #pets .switch input {display:none;}
+
+    /* The slider */
+    #pets .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #EDEDED;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    #pets .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 0px;
+        bottom: -3px;
+        background-color: #009688;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    #pets input:checked + .slider {
+        background-color:rgba(0, 150, 136, 0.5);
+    }
+
+    #pets input:focus + .slider {
+        box-shadow: 0 0 1px rgba(0, 150, 136, 0.5);
+    }
+
+    #pets input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    #pets .slider.round {
+        border-radius: 25px;
+        height: 20px;
+        width: 49px;
+    }
+
+    #pets .slider.round:before {
+        border-radius: 50%;
+    }
+
+    #pets section:nth-child(3) {
+        position: relative;
+        bottom: 31px;
+    }
+
+    #pets section:nth-child(4) {
+        position: relative;
+        bottom: 61px;
+    }
+
+    #container {
+        margin-top: 20%;
+    }
+
+    /* Design of a card */
+
+    .cardcontainer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* List functionality */
+    .list .cardlist {
+        margin: 0;
+        padding: 0;
+    }
+
+    .tinderesque .list .card {
+        display: none;
+    }
+
+    .tinderesque .list .card:first-child {
+        display: block;
+    }
+
+    /* Button designs */
+
+    .but-yay, .but-nope {
+        position: relative;
+        top: -30px;
+    }
+
+    .but-nope, .but-yay, .nopes, .yays {
+        display: none;
+    }
+
+    .tinderesque .but-nope, .tinderesque .but-yay,
+    .tinderesque .nopes, .tinderesque .yays {
+        display: inline-block;
+    }
+
+    .cardcontainer button {
+        border: none;
+        width: 56px;
+        height: 56px;
+        margin: 0 .5em;
+        display: inline-block;
+    }
+
+    .cardcontainer button:focus {
+        outline: 0;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .cardcontainer .but-nope {
+        background-image: url("../../images/dis.png");
+        background-color: transparent;
+        width: 75px;
+        height: 81px;
+    }
+
+    .cardcontainer .but-yay {
+        background-image: url("../../images/like.png");
+        background-color: transparent;
+        width: 75px;
+        height: 81px;
+    }
+
+
+    .tinderesque .cardcontainer.yes .card {
+        -webkit-animation: yay 0.7s ease-out;
+        animation: yay 0.7s ease-out;
+    }
+
+    .tinderesque .cardcontainer.nope .card {
+        -webkit-animation: nope 0.7s ease-out;
+        animation: nope 0.7s ease-out;
+    }
+
+
+    /*
+      Animations, isn't it 'fun' to repeat all of that, just for Safari? :)
+    */
+
+    .floaty .cardcontainer {
+        float: left;
+    }
+
+    .nobutton:hover .yes {
+        -webkit-animation: yay 0.7s ease-out;
+        animation: yay 0.7s ease-out;
+    }
+    .nobutton:hover .nope {
+        -webkit-animation: nope 0.7s ease-out;
+        animation: nope 0.7s ease-out;
+    }
+
+    .list ul.cardlist {
+        padding-bottom: 10px;
+    }
+
+    @keyframes yay {
+        from {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+        to {
+            transform: rotate(40deg) translateY(-80px);
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes yay {
+        from {
+            -webkit-transform: rotate(0deg);
+            opacity: 1;
+        }
+        to {
+            -webkit-transform: rotate(40deg) translateY(-80px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes nope {
+        from {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+        to {
+            transform: rotate(-40deg) translateY(-80px);
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes nope {
+        from {
+            -webkit-transform: rotate(0deg);
+            opacity: 1;
+        }
+        to {
+            -webkit-transform: rotate(-40deg) translateY(-80px);
+            opacity: 0;
+        }
+    }
+
+
+}
