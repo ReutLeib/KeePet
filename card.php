@@ -14,9 +14,7 @@
                 <img src="images/pawprint.png" alt="">
                 <p><?php 
                  echo $preferenceCats . " " . $preferenceDogs . " " . $preferenceOther;
-    
-                    
-                
+                                 
                 ?></p>
             </section>
         </article>

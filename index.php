@@ -154,7 +154,7 @@ $result = mysqli_query($connection, $query);
                                 $city = $rows["city"];
                                 $startDate = $rows["startDate"];
                                 $endDate = $rows["endDate"];
-                                
+
                                 if((isset($_POST["cats"]) && !empty($_POST["cats"])))
                                     $preferenceCats = "cats";
                                 else
@@ -173,7 +173,7 @@ $result = mysqli_query($connection, $query);
                             }
                             
                         }
-                        else {
+                        else { // there is no data
                             $city = "Tel Aviv, Hamerkaz";
                             $startDate = "05/01/18";
                             $endDate = "05/01/18";
