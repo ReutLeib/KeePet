@@ -101,17 +101,17 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <ul class="fa-ul">
                         <li>
-                            <a href="profile.html" target="_self">
+                            <a href="profile.php" target="_self">
                                 <i class="fa fa-user nav-active" aria-hidden="true" ></i><p class="nav-active">Profile</p>
                             </a>
                         </li>
                         <li>
-                            <a href="index.html" target="_self">
+                            <a href="searchCards.php" target="_self">
                                 <i class="fa fa-search" aria-hidden="true"></i><p>Search</p>
                             </a>
                         </li>
                         <li>
-                            <a href="favorite-blue.html" target="_self">
+                            <a href="favorite-blue.php" target="_self">
                                 <i class="fa fa-star" aria-hidden="true"></i><p>Favorite</p>
                             </a>
                         </li>

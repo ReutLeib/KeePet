@@ -75,12 +75,12 @@ session_start();
                             </a>
                         </li>
                         <li>
-                            <a href="main-window.html" target="_self">
+                            <a href="main-window.php" target="_self">
                             <i class="fa fa-search nav-active" aria-hidden="true"></i><p class="nav-active">Search</p>
                             </a>
                         </li>
                         <li>
-                            <a href="favorite-blue.html" target="_self">
+                            <a href="favorite-blue.php" target="_self">
                                 <i class="fa fa-star" aria-hidden="true"></i><p>Favorite</p>
                             </a>
                         </li>
