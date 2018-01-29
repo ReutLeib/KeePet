@@ -56,16 +56,12 @@
 	</div>
 
     <form action="#" method="POST">
-        <div>
-        <label for="username">username:</label>
-        <input type="text" placeholder="username" name="username"><br><br>
+        <div class="form-group"> <!-- Username Field !-->
+            <input type="text" class="form-control" id="username" placeholder="Username" name="username">
         </div>
-
-        <div>
-        <label for="password">Password:</label>
-        <input type="pass" placeholder="password" name="password" id="password"><br><br>
+        <div class="form-group"> <!-- Password Field !-->
+            <input  type="password" class="form-control" name="password" placeholder="Password" id="password">
         </div>
-
         <div>
             <?php 
                 if(isset($message)){

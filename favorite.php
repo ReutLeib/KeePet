@@ -52,7 +52,7 @@ session_start();
                 </div>
             </nav>
             <!-- End Navbar For Web -->
-
+            <main>
             <!--favorites Go Here!-->
             <section class="card">
                 <article>
@@ -81,30 +81,33 @@ session_start();
 
 
             <!--End Of favorites-->
+            </main>
 
-            <!-- Bottom Navbar For Mobile -->
-            <div id="bottom-nav">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <ul class="fa-ul">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-comment" aria-hidden="true"></i><p>Chat</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                            <i class="fa fa-search" aria-hidden="true"></i><p>Search</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-star nav-active" aria-hidden="true"></i><p class="nav-active">Favorite</p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- End Bottom Navbar For Mobile -->
+              <!-- Bottom Navbar For Mobile -->
+              <footer>
+              <div id="bottom-nav">
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                      <ul class="fa-ul">
+                          <li>
+                              <a href="profile.php">
+                                  <i class="fa fa-user" aria-hidden="true"></i><p>Profile</p>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="index.php" target="_self">
+                              <i class="fa fa-search nav-active" aria-hidden="true"></i><p class="nav-active">Search</p>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="favorite-blue.php" target="_self">
+                                  <i class="fa fa-star" aria-hidden="true"></i><p>Favorite</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </nav>
+              </div>
+              </footer>
+              <!-- End Bottom Navbar For Mobile -->
         </div>
         <p id="web-only"> work on mobile Only !</p>
         <!-- Bootstrap Scripts -->

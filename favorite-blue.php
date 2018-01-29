@@ -40,26 +40,29 @@ session_start();
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Chat <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="profile.php">Chat <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Search</a>
+                            <a class="nav-link" href="searchCards.php">Search</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Favorite</a>
+                            <a class="nav-link" href="favorite-blue.php">Favorite</a>
                         </li>
                     </ul>
                 </div>
             </nav>
             <!-- End Navbar For Web -->
-            <nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img id="logo" src="images/logo-new-png.png"></a>
-            </nav>
-            <!--favorites Go Here!-->
-            <div id="favorites"></div>
-            <!--End Of favorites-->
 
+            <main>
+                <nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#"><img id="logo" src="images/logo-new-png.png"></a>
+                </nav>
+                <!--favorites Go Here!-->
+                <div id="favorites"></div>
+                <!--End Of favorites-->
+            </main>
             <!-- Bottom Navbar For Mobile -->
+            <footer>
             <div id="bottom-nav">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <ul class="fa-ul">
@@ -70,17 +73,18 @@ session_start();
                         </li>
                         <li>
                             <a href="searchCards.php" target="_self">
-                            <i class="fa fa-search" aria-hidden="true"></i><p>Search</p>
+                            <i class="fa fa-search nav-active" aria-hidden="true"></i><p class="nav-active">Search</p>
                             </a>
                         </li>
                         <li>
                             <a href="favorite-blue.php" target="_self">
-                                <i class="fa fa-star nav-active" aria-hidden="true"></i><p class="nav-active">Favorite</p>
+                                <i class="fa fa-star" aria-hidden="true"></i><p>Favorite</p>
                             </a>
                         </li>
                     </ul>
                 </nav>
             </div>
+            </footer>
             <!-- End Bottom Navbar For Mobile -->
         </div>
         <div id="web-only">

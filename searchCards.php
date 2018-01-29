@@ -4,27 +4,27 @@ include 'db.php';
 include 'config.php';
 
 session_start();
+
 if(isset($_POST) && !empty($_POST)) { //if form was submitted
 
+    $query = "SELECT * FROM cards_227 ";
+    if( (isset($_POST["startDate"]) && !empty($_POST["startDate"]) )||
+        (isset($_POST["price"]) && !empty($_POST["price"]) )||
+        (isset($_POST["city"]) && !empty($_POST["city"]) )||
+        (isset($_POST["cats"]) && !empty($_POST["cats"]) )||
+        (isset($_POST["dogs"]) && !empty($_POST["dogs"]) )||
+        (isset($_POST["other"]) && !empty($_POST["other"])) )
+        $query.="WHERE 1";
 
-$query = "SELECT * FROM cards_227 ";
-if( (isset($_POST["startDate"]) && !empty($_POST["startDate"]) )||
-    (isset($_POST["price"]) && !empty($_POST["price"]) )|| 
-    (isset($_POST["city"]) && !empty($_POST["city"]) )|| 
-    (isset($_POST["cats"]) && !empty($_POST["cats"]) )|| 
-    (isset($_POST["dogs"]) && !empty($_POST["dogs"]) )|| 
-    (isset($_POST["other"]) && !empty($_POST["other"])) )
-    $query.="WHERE 1";
 
+    if((isset($_POST["startDate"]) && !empty($_POST["startDate"]))) $query.=" AND startDate='" . $_POST["startDate"]."'";
+    if((isset($_POST["price"]) && !empty($_POST["price"]))) $query. " <= " . " AND price=" . $_POST["price"];
+    if((isset($_POST["city"]) && !empty($_POST["city"]))) $query.=" AND city='" . $_POST["city"]."'";
+    if((isset($_POST["cats"]) && !empty($_POST["cats"]))) $query.=" AND cats='cats'";
+    if((isset($_POST["dogs"]) && !empty($_POST["dogs"]))) $query.=" AND dogs='dogs'";
+    if((isset($_POST["other"]) && !empty($_POST["other"])))  $query.=" AND other='other'";
 
-if((isset($_POST["startDate"]) && !empty($_POST["startDate"]))) $query.=" AND startDate='" . $_POST["startDate"]."'";
-if((isset($_POST["price"]) && !empty($_POST["price"]))) $query. " <= " . " AND price=" . $_POST["price"];
-if((isset($_POST["city"]) && !empty($_POST["city"]))) $query.=" AND city='" . $_POST["city"]."'";
-if((isset($_POST["cats"]) && !empty($_POST["cats"]))) $query.=" AND cats='cats'";
-if((isset($_POST["dogs"]) && !empty($_POST["dogs"]))) $query.=" AND dogs='dogs'";
-if((isset($_POST["other"]) && !empty($_POST["other"])))  $query.=" AND other='other'";
-
-$result = mysqli_query($connection, $query);
+    $result = mysqli_query($connection, $query);
 
 }
 ?>
@@ -32,7 +32,7 @@ $result = mysqli_query($connection, $query);
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Main screen</title>
+        <title>search</title>
 
         <!--Import Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -78,6 +78,7 @@ $result = mysqli_query($connection, $query);
                 </div>
             </nav>
             <!-- End Navbar For Web -->
+            <main>
             <div id="control-nav-open">
                 <button onclick="submitAndClose()" >
                     <i class="fa fa-times" aria-hidden="true"></i>
@@ -87,7 +88,7 @@ $result = mysqli_query($connection, $query);
                 </a>
 
                 <!-- FORM -->
-                <form action="index.php" method="POST" >
+                <form action="searchCards.php" method="POST" >
                     <section id="dates">
                         <b>Sitter needed</b>
                         <img src="images/calendar-small-blue.png" alt="">
@@ -97,8 +98,8 @@ $result = mysqli_query($connection, $query);
 
                     <section id="city">
                         <b>City</b>
-                        <img src="images/location-icon.png" alt="">
-                        <p>Ramat gan, Hamerkaz</p>
+                        <img src="images/location-icon.png" alt=""><br>
+                        <input type="text" name="city">
                     </section>
 
                     <section id="price">
@@ -144,34 +145,55 @@ $result = mysqli_query($connection, $query);
             <div id="container">
                 <div class="cardcontainer list">
                     <ul class="cardlist">
-                        <?php 
+                        <?php
 
                         if (isset($result)){
-                            while($rows = mysqli_fetch_array($result)){ // there is a data 
+                            while($rows = mysqli_fetch_array($result)){ // there is a data
                                 $city = $rows["city"];
                                 $startDate = $rows["startDate"];
-                                $endDate = $rows["endDate"];
+                                $endDate = $rows["endDate"];                              //
+                                $imgName = $rows["picture"];
+                                $userName = $rows["userName"];
+                                $checkSearchData= 1;
 
                                 if((isset($_POST["cats"]) && !empty($_POST["cats"])))
                                     $preferenceCats = "cats";
                                 else
                                     $preferenceCats = " ";
-                                
-                                if((isset($_POST["dogs"]) && !empty($_POST["dogs"]))) 
-                                    $preferenceDogs = "dogs"; 
+
+                                if((isset($_POST["dogs"]) && !empty($_POST["dogs"])))
+                                    $preferenceDogs = "dogs";
                                 else
                                     $preferenceDogs = " ";
                                 if((isset($_POST["other"]) && !empty($_POST["other"])))
                                     $preferenceOther = "other";
                                 else
                                     $preferenceOther = " ";
-                               
+
                                 include "card.php";
                             }
-                            
+
                         }
                         else { // there is no data at search button
-                            $query1 = "SELECT * FROM cards_227 ";
+                            $queryAllTable = "SELECT * FROM cards_227 ";
+                            $resultAllTable = mysqli_query($connection, $queryAllTable);
+                            if (isset($resultAllTable)){
+                                while($rows = mysqli_fetch_array($resultAllTable)){ // there is a data
+                                    $city = $rows["city"];
+                                    $startDate = $rows["startDate"];
+                                    $endDate = $rows["endDate"];
+                                    $imgName = $rows["picture"];
+
+                                    $checkSearchData = 0;
+                                    $preferenceCats = $rows['cats'];
+                                    $preferenceDogs = $rows['dogs'];
+                                    $preferenceOther = $rows['other'];
+
+                                    include "card.php";
+                                }
+                            }
+                            }
+
                         ?>
 
                     </ul>
@@ -182,7 +204,9 @@ $result = mysqli_query($connection, $query);
             </div>
 
             <!--End Of Cards -->
+            <main>
             <!-- Bottom Navbar For Mobile -->
+            <footer>
             <div id="bottom-nav">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <ul class="fa-ul">
@@ -204,6 +228,7 @@ $result = mysqli_query($connection, $query);
                     </ul>
                 </nav>
             </div>
+            </footer>
             <!-- End Bottom Navbar For Mobile -->
         </div>
         <div id="web-only">

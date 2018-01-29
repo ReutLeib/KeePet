@@ -66,16 +66,17 @@ session_start();
             </section>
             <!-- End Of Option -->
             <!-- Bottom Navbar For Mobile -->
+            <footer>
             <div id="bottom-nav">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <ul class="fa-ul">
                         <li>
-                            <a href="#">
-                                <i class="fa fa-comment" aria-hidden="true"></i><p>Chat</p>
+                            <a href="profile.php">
+                                <i class="fa fa-user" aria-hidden="true"></i><p>Profile</p>
                             </a>
                         </li>
                         <li>
-                            <a href="main-window.php" target="_self">
+                            <a href="index.php" target="_self">
                             <i class="fa fa-search nav-active" aria-hidden="true"></i><p class="nav-active">Search</p>
                             </a>
                         </li>
@@ -87,6 +88,7 @@ session_start();
                     </ul>
                 </nav>
             </div>
+            </footer>
             <!-- End Bottom Navbar For Mobile -->
         </div>
         <!-- Bootstrap Scripts -->

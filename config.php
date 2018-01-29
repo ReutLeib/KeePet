@@ -1,2 +1,5 @@
 <?php
-define("URL", "http://shenkar.html5-book.co.il/2017-2018/html5/dev_227/updateReut3/");
+// define("URL", "http://localhost/finalProject/1/");
+define("URL", "http://localhost/finalProject/4/");
+
+// define("URL", "http://shenkar.html5-book.co.il/2017-2018/html5/dev_227/updateReut4/");
