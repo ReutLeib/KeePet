@@ -1,0 +1,11 @@
+add like to table cards_227:
+query:
+UPDATE  `auxstudDB7c`.`cards_227` SET  `like` =  'like' WHERE  `cards_227`.`userName` = "ReutLeib" LIMIT 1 ;
+
+remove like from table cards_227:
+query:
+UPDATE  `auxstudDB7c`.`cards_227` SET  `like` =  '' WHERE  `cards_227`.`userName` = "ReutLeib" LIMIT 1 ;
+
+after user login  clear the columns LIKE for all users:
+query:
+UPDATES `auxstudDB7c`.`cards_227` SET `like` = "like";

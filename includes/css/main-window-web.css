@@ -1,5 +1,5 @@
 
-@media screen and (max-width: 799px) {
+@media screen and (min-width: 780px) {
     *{
         margin:0;
         padding: 0;
@@ -149,7 +149,7 @@
     .date p{
         position: relative;
         top: -58px;
-        left: -20px;
+        left: -34px;
     }
 
     .pet{
@@ -169,7 +169,7 @@
     .pet p{
         position: relative;
         top: -33px;
-        left: -51px;
+        left: -80px;
     }
 
     .list ul .cardlist{
@@ -183,7 +183,7 @@
         z-index: 1;
         top: 0;
         width: 75%;
-        height: 96%;
+        height: 91%;
         background-color: #ffffff;
     }
 

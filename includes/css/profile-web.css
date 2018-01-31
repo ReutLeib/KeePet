@@ -1,0 +1,195 @@
+
+@media screen and (min-width: 780px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #web-only {
+        display: none;
+    }
+
+    body {
+        background-image: url('../../images/background-alpha.png');
+    }
+
+    button {
+        background-color: transparent;
+    }
+
+    #wrapper {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #web-nav {
+        display: none;
+    }
+
+    #bottom-nav {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+    #bottom-nav nav {
+        height: 56px;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        margin: 10px auto;
+    }
+
+    img#logo {
+        display: block;
+        width: 56px;
+        height: 33px;
+    }
+
+    img#control-nav {
+        display: none;
+        position: fixed;
+        left: 8.33%;
+        width: 24px;
+        height: 24px;
+    }
+
+    .fa-ul {
+        width: 100%;
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    li > a {
+        text-align: center;
+        display: block;
+        width: 30vw;
+        float: left;
+    }
+
+    .nav-active {
+        color: #40867A;
+    }
+
+    .fa-star {
+        color: #D1D3D4;
+    }
+
+    .fa-search {
+        color: #D1D3D4;
+    }
+
+    .fa-comment {
+        color: #D1D3D4;
+    }
+
+    textarea {
+        margin: 0;
+        color: #D1D3D4;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .card section .fa-star {
+        color: #40867A;
+    }
+
+    .navbar button {
+        position: fixed;
+        float: right;
+    }
+
+    /* Profile Css */
+
+    #profile {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #profile p{
+        width: 90%;
+        margin: 1% auto;
+    }
+
+    #profile section{
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 162px;
+        background-color: #5ec1b06b;
+    }
+
+    #profile img {
+        display: block;
+        margin: 27% auto 10px auto;
+        border: 5px solid #ffffffb8;
+        box-shadow: 1px 1px 7px -2.7px;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+    }
+
+    #about-me {
+        margin-top: 6%;
+    }
+
+    h3 {
+        text-align: center;
+        color: #000000;
+        margin-bottom: 1px;
+    }
+
+    h5{
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        text-align: center;
+        color: #95a5a6;
+    }
+
+    h6 {
+        width: 90%;
+        margin: 1% auto;
+    }
+
+    h1{
+        display: none;
+    }
+
+    #rate {
+        position: relative;
+        display: inline-block;
+        left: 135px;
+    }
+
+    #rate .fa-star {
+        color: #5EC1B0;
+    }
+
+    #profile .button {
+        width: 80%;
+        margin: 20px auto;
+        background-color: #5EC1B0;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        border-radius: 28px;
+        cursor: pointer;
+        padding: 3px 17px;
+    }
+
+    textarea{
+        margin-left: 3%;
+        width: 85%;
+        height: 100%;
+        border: 0px;
+        background: 0%;
+    }
+
+
+
+}
