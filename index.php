@@ -25,7 +25,8 @@
             $message = "Invalid user name OR password!";
         }
 
-       
+       $resetColTableLike = "UPDATE `auxstudDB7c`.`cards_227` SET `like` = ' '";
+       mysqli_query($connection, $resetColTableLike);
     }
 ?>
 
