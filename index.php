@@ -5,27 +5,27 @@
 	session_start();
 
     if(!empty($_POST["username"])){ //if form was submitted
-        // echo 'FORM SENT';
 
         $query = "SELECT * FROM passwords_227 WHERE userName='"
         . $_POST["username"]
         . "' and password = '"
         . $_POST["password"]
         . "'";
-        // echo $query;
-    
+
         $result = mysqli_query($connection, $query);
         $row = mysqli_fetch_array($result);
 
-        if(is_array($row)){ // if data is true 
-			$_SESSION["userName"] = $row['userName'];
+        if(is_array($row)){ // if data is true
+          $_SESSION["userName"] = $row['userName'];
+          $_SESSION["userid"] = $row['id'];
+
             header('Location: ' . URL . 'searchCards.php' );
         }
         else{
             $message = "Invalid user name OR password!";
         }
-
-       $resetColTableLike = "UPDATE `auxstudDB7c`.`cards_227` SET `like` = ' '";
+        
+       $resetColTableLike = "TRUNCATE TABLE likes_227";        
        mysqli_query($connection, $resetColTableLike);
     }
 ?>
@@ -48,7 +48,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 	<link rel="stylesheet" href="includes/css/login-mobile.css">
 	<!-- <link rel="stylesheet" href="includes/css/login-web.css"> -->
-    
+
 
 </head>
 <body>
@@ -66,7 +66,7 @@
             <input  type="password" class="form-control" name="password" placeholder="Password" id="password">
         </div>
         <div>
-            <?php 
+            <?php
                 if(isset($message)){
                     echo $message;
                 }
@@ -74,7 +74,7 @@
         </div>
         <button type="submit" class="signInGreen">
 		<button type="submit" class="signUpGreen">
-        
+
 	</form>
 			</div>
 </body>
@@ -84,4 +84,3 @@
 //close
 mysqli_close($connection);
 ?>
-

@@ -36,7 +36,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" href="includes/css/profile-mobile.css">
         <link rel="stylesheet" href="includes/css/profile-web.css">        
-        <link rel="stylesheet" href="includes/css/web.css">
 
         <!-- JQUERY -->
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -92,12 +91,14 @@
                     ?>
                     </textarea>
                     <div id="reccomend">
+                    <h6>Recommendation</h6>
+                    <div id="recomm">
                     </div>
                     <button class="button"> Edit </button>
                     </form>
                </article>
+              
             </div>
-
             <!-- End of Content -->
 
                <!-- Bottom Navbar For Mobile -->

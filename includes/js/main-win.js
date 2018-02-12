@@ -73,7 +73,13 @@ function openNav() {
         }
         return origin;
     }
-
+    function doLike(element){
+      var cardid = element.data("id");
+      $.getJSON("doLike.php",{cardid:cardid},function(data){
+        if (data.status==200) console.log("Liked");
+        else console.log("Failed");        
+      }).fail(function() { console.log("FAIL"); });
+    }
     function animationdone(ev) {
         animating = false;
         var origin = getContainer(ev.target);
@@ -86,6 +92,7 @@ function openNav() {
         if (origin.classList.contains('list')) {
             if (ev.animationName === 'nope' ||
                 ev.animationName === 'yay') {
+                    if (ev.animationName === 'yay') doLike($('.card:first-child'));
                 origin.querySelector('.card:first-child').remove();
                 if (!origin.querySelector('.card')) {
                     fireCustomEvent('deckempty', {
@@ -93,7 +100,7 @@ function openNav() {
                         container: origin,
                         card: null
                     });
-                } 
+                }
             }
         }
     }

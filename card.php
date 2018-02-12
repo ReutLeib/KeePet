@@ -1,11 +1,10 @@
 <?php
 
     $dirFile = "images/";
-    
+
 ?>
-<li class="card">
+<li class="card" data-id="<?php echo $cardid;?>">
 <img class="card-img-top" src="<?php echo $dirFile . $imgName ?>" alt"Card image cap">
-    <!-- images/Image%201.png" alt="Card image cap"> -->
     <div class="card-body">
         <article class="house-content">
             <section class="location">
@@ -18,14 +17,14 @@
             </section>
             <section class="pet">
                 <img src="images/pawprint.png" alt="">
-                <p><?php 
+                <p><?php
                 if($checkSearchData){
                     echo $preferenceCats . " " . $preferenceDogs . " " . $preferenceOther;
                 }
                 else{
                     echo $preferenceCats . " " . $preferenceDogs . " " . $preferenceOther;
                 }
-                                 
+
                 ?></p>
             </section>
         </article>

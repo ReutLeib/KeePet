@@ -24,7 +24,6 @@ session_start();
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" href="includes/css/main-window-mobile.css">
         <link rel="stylesheet" href="includes/css/main-window-web.css">        
-        <link rel="stylesheet" href="includes/css/web.css">
 
         <!-- JQUERY -->
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -93,7 +92,6 @@ session_start();
             <!-- End Bottom Navbar For Mobile -->
         </div>
         <!-- Bootstrap Scripts -->
-        <!--<script type="text/javascript" src="includes/js/scripts.js"></script>-->
         <script src="includes/js/main-win.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" async></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous" async></script>

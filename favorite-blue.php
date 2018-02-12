@@ -2,8 +2,11 @@
 
 include 'db.php';
 include 'config.php';
-
 session_start();
+
+$id = $_SESSION['userid'];
+$query = "SELECT c.userName FROM likes_227 l INNER JOIN cards_227 c on l.cardid = c.id WHERE l.userid = $id;";
+$result = mysqli_query($connection, $query);
 
 ?>
 
@@ -24,8 +27,7 @@ session_start();
         <!-- Boostrap & CSS-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" href="includes/css/favorite-mobile-blue.css">
-        <link rel="stylesheet" href="includes/css/favorite-web-blue.css">        
-        <link rel="stylesheet" href="includes/css/web.css">
+        <link rel="stylesheet" href="includes/css/favorite-web-blue.css">
 
         <!-- JQUERY -->
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -59,7 +61,18 @@ session_start();
                     <a class="navbar-brand" href="#"><img id="logo" src="images/logo-new-png.png"></a>
                 </nav>
                 <!--favorites Go Here!-->
-                <div id="favorites"></div>
+                <div id="favorites">
+                  <?php
+
+                  if (isset($result)){
+                      while($rows = mysqli_fetch_array($result)){ // there is a data
+                        $name = $rows["userName"];
+                        include "cardFavorite.php";
+                      }
+                  }
+?>
+
+                </div>
                 <!--End Of favorites-->
             </main>
             <!-- Bottom Navbar For Mobile -->
@@ -93,9 +106,6 @@ session_start();
             <p>Mobile Only</p>
             <img id="qr-code" src="images/QR_Code_keepet%20.png" alt="">
         </div>
-        <!--favorite Scripts-->
-        <script src="includes/js/favorite-blue.js"></script>
-        <!-- Bootstrap Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" async></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous" async></script>
     </body>

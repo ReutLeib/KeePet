@@ -7,14 +7,7 @@ session_start();
 
 if(isset($_POST) && !empty($_POST)) { //if form was submitted
 
-    $query = "SELECT * FROM cards_227 ";
-    if( (isset($_POST["startDate"]) && !empty($_POST["startDate"]) )||
-        (isset($_POST["price"]) && !empty($_POST["price"]) )||
-        (isset($_POST["city"]) && !empty($_POST["city"]) )||
-        (isset($_POST["cats"]) && !empty($_POST["cats"]) )||
-        (isset($_POST["dogs"]) && !empty($_POST["dogs"]) )||
-        (isset($_POST["other"]) && !empty($_POST["other"])) )
-        $query.="WHERE 1";
+    $query = "SELECT * FROM cards_227 WHERE id not in (select cardid from likes_227 where userid = 2)";
 
 
     if((isset($_POST["startDate"]) && !empty($_POST["startDate"]))) $query.=" AND startDate='" . $_POST["startDate"]."'";
@@ -23,7 +16,7 @@ if(isset($_POST) && !empty($_POST)) { //if form was submitted
     if((isset($_POST["cats"]) && !empty($_POST["cats"]))) $query.=" AND cats='cats'";
     if((isset($_POST["dogs"]) && !empty($_POST["dogs"]))) $query.=" AND dogs='dogs'";
     if((isset($_POST["other"]) && !empty($_POST["other"])))  $query.=" AND other='other'";
-
+    $query.=" order by rand()";
     $result = mysqli_query($connection, $query);
 
 }
@@ -46,7 +39,7 @@ if(isset($_POST) && !empty($_POST)) { //if form was submitted
         <!-- Boostrap & CSS-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
         <link rel="stylesheet" href="includes/css/main-window-mobile.css">
-        <link rel="stylesheet" href="includes/css/main-window-web.css">   
+        <link rel="stylesheet" href="includes/css/main-window-web.css">
         <link rel="stylesheet" href="includes/css/web.css">
 
         <!-- JS -->
@@ -132,7 +125,8 @@ if(isset($_POST) && !empty($_POST)) { //if form was submitted
                                 <input type="checkbox" name="other">
                                 <span class="slider round"></span>
                             </label>
-                            <input type="submit" class="saveAndClose" value="Save and close"/>
+                            <input type="image" src="images/save.png" class="saveAndClose   ">
+
 
                         </section>
 
@@ -155,6 +149,7 @@ if(isset($_POST) && !empty($_POST)) { //if form was submitted
                                 $endDate = $rows["endDate"];                              //
                                 $imgName = $rows["picture"];
                                 $userName = $rows["userName"];
+                                $cardid = $rows["id"];
                                 $checkSearchData= 1;
 
                                 if((isset($_POST["cats"]) && !empty($_POST["cats"])))
@@ -176,7 +171,7 @@ if(isset($_POST) && !empty($_POST)) { //if form was submitted
 
                         }
                         else { // there is no data at search button
-                            $queryAllTable = "SELECT * FROM cards_227 ";
+                          $queryAllTable = "SELECT * FROM cards_227 WHERE id not in (select cardid from likes_227 where userid = 2) order by rand()";
                             $resultAllTable = mysqli_query($connection, $queryAllTable);
                             if (isset($resultAllTable)){
                                 while($rows = mysqli_fetch_array($resultAllTable)){ // there is a data
@@ -189,7 +184,7 @@ if(isset($_POST) && !empty($_POST)) { //if form was submitted
                                     $preferenceCats = $rows['cats'];
                                     $preferenceDogs = $rows['dogs'];
                                     $preferenceOther = $rows['other'];
-
+                                    $cardid = $rows["id"];
                                     include "card.php";
                                 }
                             }

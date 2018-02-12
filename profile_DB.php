@@ -19,7 +19,6 @@
 
     //get data from DB
     $query  = "UPDATE profiles_227 SET aboutMe = '" . $AboutMe . "' WHERE userName =  '" . $user . "'" ;
-    // echo $query;
     $result = mysqli_query($connection, $query);
     if(!$result) {
         die("DB query failed.");
